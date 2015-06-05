@@ -1,0 +1,20 @@
+.container {
+	margin-top: 40px;
+}
+
+.doc-form input,textarea {
+	margin:15px auto;
+}
+
+.action-btn {
+	display: inline;
+	margin-left: 20px;
+	color: #31708f;
+	font-size: 0.6em;
+	cursor: pointer;
+}
+
+.action-btn:hover {
+	color: #4291B8;
+	text-decoration:underline;
+}

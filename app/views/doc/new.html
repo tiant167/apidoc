@@ -1,0 +1,13 @@
+{% extends '../layouts/default.html' %}
+
+{% block content %}
+<form method="POST" class="doc-form">
+<h5>Doc Title</h5>
+<input class="form-control" name='title' value='{{doc.title}}' placeholder='type title here'></input>
+<h5>Abstract</h5>
+<textarea class="form-control" name='abstract' rows='5'>{{doc.abstract}}</textarea> 
+<h5>Content</h5>
+<textarea class="form-control" name='content' rows='20'>{{doc.content}}</textarea>
+<input class='btn btn-default' type='submit'></input>
+</form>
+{% endblock %}
