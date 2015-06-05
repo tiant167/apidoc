@@ -1,6 +1,9 @@
 {% extends '../layouts/default.html' %}
 
 {% block content %}
+<div class="page-header">
+  <h3>Create New Doc</h3>
+</div>
 <form method="POST" class="doc-form">
 <h5>Doc Title</h5>
 <input class="form-control" name='title' value='{{doc.title}}' placeholder='type title here'></input>

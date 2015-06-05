@@ -2,7 +2,7 @@
 * @Author: chaihaotian
 * @Date:   2015-06-02 19:01:23
 * @Last Modified by:   chaihaotian
-* @Last Modified time: 2015-06-04 20:39:00
+* @Last Modified time: 2015-06-06 00:39:25
 */
 
 'use strict';
@@ -29,12 +29,12 @@ exports.showView = function(req, res, next){
 
 // add doc View
 exports.newView = function(req, res){
-  res.render('doc/new', { title: 'Express', doc: new Doc()});
+  res.render('doc/new', { title: 'Create New Doc', doc: new Doc()});
 };
 
 // update doc View
 exports.updateView = function(req, res){
-  res.render('doc/new', { title: 'Express', doc: req.doc})
+  res.render('doc/new', { title: 'Edit Doc', doc: req.doc})
 }
 
 // update view
@@ -45,7 +45,7 @@ exports.update = function(req, res){
     if (!err){
       return res.redirect('/doc/' + doc._id);
     }
-    return res.render('doc/new', { title: 'Express', doc: doc});
+    return res.render('doc/new', { title: 'Edit Doc', doc: doc});
   });
 }
 
@@ -56,13 +56,13 @@ exports.create = function(req, res){
     if (!err){
       return res.redirect('/doc/' + doc._id);
     }
-    return res.render('doc/new', { title: 'Express', doc: doc});
+    return res.render('doc/new', { title: 'Edit Doc', doc: doc});
   });
 };
 
 // list
 exports.list = function(req, res, next){
   Doc.find({}, function(err, docs){
-    res.render('doc/index', { title: 'Express', docs: docs});
+    res.render('doc/index', { title: 'Docs List', docs: docs});
   })
 };
